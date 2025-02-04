@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./pages/Layout";
-import HomePage from "./pages/HomePage";
-import SlugPage from "./pages/SlugPage";
+import Layout from "./pages/Layout.tsx";
+import HomePage from "./pages/HomePage.tsx";
+import SlugPage from "./pages/SlugPage.tsx";
 import "./global.css";
 
 

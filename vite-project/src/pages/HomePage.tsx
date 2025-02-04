@@ -1,8 +1,11 @@
+
 export default function HomePage() {
 
     return (
-        <main>
-            <h1>Hello, World!</h1>
-        </main>
+        <>
+            <div className="flex md:order-2">
+                Hello
+            </div>
+        </>
     )
 }
