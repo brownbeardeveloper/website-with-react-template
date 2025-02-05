@@ -1,4 +1,4 @@
-import { IoSearchCircle } from "react-icons/io5";
+import SearchIcon from "../assets/search.svg?react";
 
 export default function SearchBar() {
     return (
@@ -11,12 +11,12 @@ export default function SearchBar() {
                     focus:outline-none focus:ring-4 focus:ring-blue-500 dark:focus:ring-pink-700
                     cursor-pointer hover:ring-4 hover:ring-blue-200 dark:hover:ring-pink-400"
                 >
-                    <IoSearchCircle className="text-4xl text-slate-100 dark:text-slate-300" />
+                    <SearchIcon className="text-4xl text-slate-700 dark:text-slate-300" />
                 </button>
 
                 <div className="relative hidden md:block mr-2">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-                        <IoSearchCircle className="text-3xl text-slate-700 dark:text-slate-300" />
+                        <SearchIcon className="text-3xl text-slate-700 dark:text-slate-300" />
                     </div>
                     <input type="text" id="search-navbar" aria-label="Search" className="block w-full p-2 ps-10 text-sm 
                     text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 
