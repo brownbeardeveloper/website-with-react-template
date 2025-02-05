@@ -3,11 +3,12 @@ import SkillSwipeIcon from "../assets/skillswipe.svg?react";
 
 export default function Header() {
     return (
-        <nav className="sticky top-5 w-full flex justify-center">
+        <header className="w-full fixed top-5 flex justify-center">
 
-            <div className="p-4 flex items-center justify-center
+            <nav className="p-4 flex items-center justify-center
                 bg-gradient-to-b from-slate-50 via-gray-100 to-slate-50
-                border rounded gap-10">
+                dark:bg-gradient-to-b dark:from-gray-800 dark:via-slate-900 dark:to-gray-800
+                rounded gap-10">
 
                 <a href="/" className="flex items-center no-wrap">
                     <SkillSwipeIcon className="fill-yellow-600 dark:fill-gray-500" />
@@ -35,7 +36,7 @@ export default function Header() {
                     </ul>
                 </div>
 
-            </div>
-        </nav>
+            </nav>
+        </header>
     );
 };
