@@ -10,7 +10,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="w-full  fixed top-5 flex justify-center">
+        <header id="header" className="w-full  fixed top-5 flex justify-center">
             <nav className="w-9/10 max-w-200 flex items-center justify-between
                 bg-gradient-to-b from-slate-50 via-gray-100 to-slate-50
                 dark:bg-gradient-to-b dark:from-gray-800 dark:via-slate-900 dark:to-gray-800

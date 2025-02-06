@@ -4,3 +4,17 @@
 @theme {
     --font-permanentmarker: "Permanent Marker", sans-serif;
 }
+
+/* max z-index: 20 */
+
+main * {
+    z-index: 2;
+}
+
+#header {
+    z-index: 18;
+}
+
+#blob-div {
+    z-index: 1;
+}

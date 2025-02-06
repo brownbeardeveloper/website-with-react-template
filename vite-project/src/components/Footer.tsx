@@ -1,4 +1,4 @@
-import WaveDivider from "../assets/wave.svg?react";
+import WaveDivider from "../assets/footer-wave.svg?react";
 import FacebookIcon from "../assets/facebook.svg?react";
 import LinkedinIcon from "../assets/linkedin.svg?react";
 import InstagramIcon from "../assets/instagram.svg?react";
@@ -8,8 +8,8 @@ export default function Footer() {
 
     return (
         <div className="max-h-10">
-            <div className="-mb-1 dark:bg-slate-700">
-                <WaveDivider />
+            <div className="-mb-1 ">
+                <WaveDivider className="bg-gray-100 dark:bg-slate-700" />
             </div>
 
             <div className="w-full min-h-screen flex items-center justify-center bg-purple-700 dark:bg-gray-900">
