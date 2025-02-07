@@ -1,117 +1,59 @@
-import BlobDivider from "../assets/blob.svg?react";
+import { MessagesSquare } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { Ribbon } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Cookie } from 'lucide-react';
 
 export default function ContactPage() {
 
-    const lbl = "block text-sm font-medium text-gray-700 dark:text-gray-200"
-    const inpt = "block w-full px-4 py-3 border rounded-md shadow-sm outline-none \
-        border-gray-300 bg-gray-50 dark:border-gray-300 dark:border-gray-200"
+    const icns = "text-blue-900"
+    const icnDivs = "flex items-center my-auto flex-col gap-y-3 text-center"
+    const icnTxts = "dark:text-gray-700"
+    const icnBtns = "px-4 py-1 font-bold text-lg cursor-pointer rounded bg-blue-900 \
+        text-white hover:text-blue-900 hover:bg-gray-200 transition-all duration-100"
+
 
     return (
-        <main className="border w-full h-screen max-w-screen-xl mx-auto flex flex-col items-center justify-center p-6 relative">
-            <div className="">
-                <form id="contact-form" noValidate className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                    <div className="sm:col-span-2">
-                        <label htmlFor="firstname" className={lbl}>
-                            Namn *
-                        </label>
-                        <div className="mt-1">
-                            <input
-                                id="firstname"
-                                name="firstname"
-                                type="text"
-                                autoComplete="given-name"
-                                className={inpt} />
-                        </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                        <label htmlFor="company" className={lbl}>
-                            Företag *
-                        </label>
-                        <div className="mt-1">
-                            <input
-                                id="company"
-                                name="company"
-                                type="text"
-                                autoComplete="organization"
-                                className={inpt}
-                            />
-                        </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                        <label htmlFor="email" className={lbl} >
-                            Email *
-                        </label>
-                        <div className="mt-1">
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                className={inpt}
-                            />
-                        </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                        <label htmlFor="phone" className={lbl}>
-                            Telefon (Om du vill bli kontaktad)
-                        </label>
-                        <input
-                            id="phone"
-                            name="phone"
-                            type="tel"
-                            inputMode="tel"
-                            autoComplete="tel"
-                            placeholder="Tex. 070255255255"
-                            className={inpt}
-                        />
-                    </div>
-
-                    <div className="sm:col-span-2">
-                        <label htmlFor="message" className={lbl}>
-                            Meddelande *
-                        </label>
-                        <span className="block text-xs text-gray-500 dark:text-gray-400">Max 2000 tecken</span>
-                        <span className="text-xs text-gray-500 dark:text-gray-400">Antal tecken: 0</span>
-                        <div className="mt-1">
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="5"
-                                className={inpt}
-                                placeholder="Skriv ditt meddelande här"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                        <p className="text-base text-gray-500 dark:text-gray-200">
-                            När du skickar denna kontaktförfrågan godkänner du att vi behandlar och lagrar dessa uppgifter.
-                        </p>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                        <button
-                            type="submit"
-                            className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium 
-                            text-white duration-300 scale-100 bg-black border border-transparent rounded-md 
-                            shadow-sm outline-none hover:bg-gray-900 hover:scale-[1.03]"
-                        >
-                            Skicka meddelande
-                        </button>
-                    </div>
-                </form>
-
+        <>
+            <div className="h-84 bg-center bg-cover bg-[url('./old-town.jpg')]" >
+                <div className="w-full h-full flex flex-col justify-center text-center text-gray-100 gap-y-2">
+                    <h1 className="text-6xl strokeme font-permanentmarker">
+                        Kontakt Skillswipe
+                    </h1>
+                    <p className="font-permanentmarker strokeme text-xl">
+                        Kontakta oss för mer information!
+                    </p>
+                </div>
             </div>
 
-            <div id="blob-div" className="absolute top-[12%] right-[10%]">
-                <BlobDivider className=" w-full h-32 md:h-100" />
+            <div className="h-50 mx-auto gap-x-10 md:gap-x-25 flex justify-center
+            dark:bg-gradient-to-b dark:from-gray-50 dark:via-gray-100 dark:to-gray-50">
+                <div className={icnDivs}>
+                    <MessagesSquare className={icns} size={50} />
+                    <p className={icnTxts}>Product FAQs</p>
+                    <button className={icnBtns}>click me</button>
+                </div>
+                <div className={icnDivs}>
+                    <ShieldCheck className={icns} size={50} />
+                    <p className={icnTxts}>Privacy Inquiry</p>
+                    <button className={icnBtns}>click me</button>
+                </div>
+                <div className={icnDivs}>
+                    <Ribbon className={icns} size={50} />
+                    <p className={icnTxts}>Ribbon</p>
+                    <button className={icnBtns}>click me</button>
+                </div>
+                <div className={icnDivs}>
+                    <Mail className={icns} size={50} />
+                    <p className={icnTxts}>Send message</p>
+                    <button className={icnBtns}>click me</button>
+                </div>
+                <div className={icnDivs}>
+                    <Cookie className={icns} size={50} />
+                    <p className={icnTxts}>Cookies</p>
+                    <button className={icnBtns}>click me</button>
+                </div>
             </div>
-
-
-
-        </main>
+        </>
     );
 }
