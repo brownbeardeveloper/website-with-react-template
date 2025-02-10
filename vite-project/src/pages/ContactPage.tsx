@@ -1,9 +1,14 @@
 import QuickAccessBanner from "../components/QuickAccessBanner";
+import ContactBanner from "../components/ContactBanner";
 import { MessagesSquare } from 'lucide-react';
 import { ShieldCheck } from 'lucide-react';
 import { Ribbon } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Cookie } from 'lucide-react';
+import DevSvg from '../assets/dev.svg?react'
+import TripSvg from '../assets/trip.svg?react'
+import ApplicationSvg from '../assets/application.svg?react'
+
 
 export default function ContactPage() {
 
@@ -40,6 +45,36 @@ export default function ContactPage() {
         },
     ];
 
+    const selections = [
+        {
+            svg: <DevSvg className="h-full w-full" />,
+            isRight: true,
+            header: "Email Us",
+            description: "support@example.com",
+            wave: true,
+            waveColor: "fill-amber-500",
+            divColor: "bg-amber-500",
+        },
+        {
+            svg: <TripSvg className="h-full w-full" />,
+            isRight: false,
+            header: "Call Us",
+            description: "+123456789",
+            wave: true,
+            waveColor: "fill-slate-500",
+            divColor: "bg-slate-500",
+        },
+        {
+            svg: <ApplicationSvg className="h-full w-full" />,
+            isRight: false,
+            header: "Call Us",
+            description: "+123456789",
+            wave: false,
+            waveColor: "",
+            divColor: "",
+        },
+    ];
+
 
     return (
         <>
@@ -56,6 +91,12 @@ export default function ContactPage() {
 
             <div>
                 <QuickAccessBanner props={helpCenterProps} />
+            </div>
+
+            <div className="space-y-5">
+                {selections.map((selection, index) => (
+                    <ContactBanner key={index} props={selection} />
+                ))}
             </div>
         </>
     );
