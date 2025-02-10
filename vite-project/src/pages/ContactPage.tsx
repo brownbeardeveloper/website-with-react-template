@@ -1,3 +1,4 @@
+import QuickAccessBanner from "../components/QuickAccessBanner";
 import { MessagesSquare } from 'lucide-react';
 import { ShieldCheck } from 'lucide-react';
 import { Ribbon } from 'lucide-react';
@@ -6,11 +7,38 @@ import { Cookie } from 'lucide-react';
 
 export default function ContactPage() {
 
-    const icns = "text-blue-900"
-    const icnDivs = "flex items-center my-auto flex-col gap-y-3 text-center"
-    const icnTxts = "dark:text-gray-700"
-    const icnBtns = "px-4 py-1 font-bold text-lg cursor-pointer rounded bg-blue-900 \
-        text-white hover:text-blue-900 hover:bg-gray-200 transition-all duration-100"
+    const helpCenterProps = [
+        {
+            icon: <MessagesSquare size={60} />,
+            text: "Vanliga frågor",
+            btnText: "Läs mer",
+            onClick: () => alert("FAQs clicked"),
+        },
+        {
+            icon: <ShieldCheck size={60} />,
+            text: "Integritet",
+            btnText: "Visa policy",
+            onClick: () => alert("Integritet clicked"),
+        },
+        {
+            icon: <Mail size={60} />,
+            text: "Kontakta oss",
+            btnText: "Kontakta oss",
+            onClick: () => alert("Mail clicked"),
+        },
+        {
+            icon: <Cookie size={60} />,
+            text: "Kakor",
+            btnText: "Läs mer",
+            onClick: () => alert("Kakor clicked"),
+        },
+        {
+            icon: <Ribbon size={60} className="text-pink-400 dark:text-pink-200" />,
+            text: "Rosa Bandet",
+            btnText: "Läs mer",
+            onClick: () => alert("Rosa Bandet clicked"),
+        },
+    ];
 
 
     return (
@@ -26,33 +54,8 @@ export default function ContactPage() {
                 </div>
             </div>
 
-            <div className="h-50 mx-auto gap-x-10 md:gap-x-25 flex justify-center
-            dark:bg-gradient-to-b dark:from-gray-50 dark:via-gray-100 dark:to-gray-50">
-                <div className={icnDivs}>
-                    <MessagesSquare className={icns} size={50} />
-                    <p className={icnTxts}>Product FAQs</p>
-                    <button className={icnBtns}>click me</button>
-                </div>
-                <div className={icnDivs}>
-                    <ShieldCheck className={icns} size={50} />
-                    <p className={icnTxts}>Privacy Inquiry</p>
-                    <button className={icnBtns}>click me</button>
-                </div>
-                <div className={icnDivs}>
-                    <Ribbon className={icns} size={50} />
-                    <p className={icnTxts}>Ribbon</p>
-                    <button className={icnBtns}>click me</button>
-                </div>
-                <div className={icnDivs}>
-                    <Mail className={icns} size={50} />
-                    <p className={icnTxts}>Send message</p>
-                    <button className={icnBtns}>click me</button>
-                </div>
-                <div className={icnDivs}>
-                    <Cookie className={icns} size={50} />
-                    <p className={icnTxts}>Cookies</p>
-                    <button className={icnBtns}>click me</button>
-                </div>
+            <div>
+                <QuickAccessBanner props={helpCenterProps} />
             </div>
         </>
     );
