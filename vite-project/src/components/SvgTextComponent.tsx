@@ -5,9 +5,9 @@ import BottomWave from '../assets/bottom-wave.svg?react'
 interface PropsInterface {
     svg: ReactNode,
     isRight: boolean,
-    header: string,
+    title: string,
     description: string,
-    headerColor: string,
+    titleColor: string,
     textColor: string,
     wave?: boolean,
     waveColor?: string,
@@ -15,7 +15,7 @@ interface PropsInterface {
 }
 
 
-export default function svgTextComponent(props: PropsInterface) {
+export default function SvgTextComponent(props: PropsInterface) {
 
     return (
         <div className="w-full h-auto">
@@ -29,8 +29,8 @@ export default function svgTextComponent(props: PropsInterface) {
                     {props.svg}
                 </div>
                 <div className="max-w-full md:max-w-1/2 mt-4">
-                    <h3 className={`text-lg font-semibold ${props.headerColor}`}>{props.header}</h3>
-                    <p className={`text-sm font-semibold ${props.textColor}`}>{props.description}</p>
+                    <h3 className={`tracking-wide text-2xl font-bold ${props.titleColor}`}>{props.title}</h3>
+                    <p className={`mt-1 text-sm font-semibold ${props.textColor}`}>{props.description}</p>
                 </div>
             </div>
 

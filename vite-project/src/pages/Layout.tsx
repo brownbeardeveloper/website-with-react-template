@@ -6,7 +6,7 @@ export default function Layout() {
     return (
         <>
             <Header />
-            <main className="w-full max-w-screen-xl mx-auto pt-30">
+            <main className="w-full max-w-screen-xl mx-auto">
                 <Outlet />
             </main>
             <Footer />

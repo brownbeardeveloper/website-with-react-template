@@ -4,8 +4,7 @@ import Layout from "./pages/Layout.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import SlugPage from "./pages/SlugPage.tsx";
 import "./global.css";
-import AboutPage from "./pages/AboutPage.tsx";
-import ContactPage from "./pages/ContactPage.tsx";
+import HelpCenterPage from "./pages/HelpCenterPage.tsx";
 
 
 const router = createBrowserRouter([
@@ -18,8 +17,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/contact",
-        element: <ContactPage />
+        path: "/help",
+        element: <HelpCenterPage />
       },
       {
         path: "/:slug",

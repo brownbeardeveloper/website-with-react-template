@@ -6,8 +6,8 @@ export default function Header() {
 
     const menuItems = [
         { text: 'Hem', href: '/' },
-        { text: 'Om oss', href: '/about' },
-        { text: 'Kontakt', href: '/contact' },
+        { text: 'Produkter', href: '/products' },
+        { text: 'Hjälpcenter', href: '/help' },
     ];
 
     return (
