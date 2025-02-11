@@ -8,6 +8,8 @@ import { Cookie } from 'lucide-react';
 import DevSvg from '../assets/dev.svg?react'
 import TripSvg from '../assets/trip.svg?react'
 import ApplicationSvg from '../assets/application.svg?react'
+import WelcomeSvg from '../assets/welcome.svg?react'
+
 
 
 export default function ContactPage() {
@@ -27,8 +29,8 @@ export default function ContactPage() {
         },
         {
             icon: <Mail size={60} />,
-            text: "Kontakta oss",
-            btnText: "Kontakta oss",
+            text: "Mejla oss",
+            btnText: "Skicka mail",
             onClick: () => alert("Mail clicked"),
         },
         {
@@ -47,38 +49,51 @@ export default function ContactPage() {
 
     const contactPageComponents = [
         {
-            svg: <DevSvg className="h-full w-full" />,
+            svg: <WelcomeSvg className="h-full w-full" />,
             isRight: true,
-            header: "Email Us",
-            description: "support@example.com",
+            header: "Mejla oss",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit, at ullamcorper odio vehicula et. Curabitur in neque sit amet risus tempor fermentum et a purus. Vivamus vitae lectus ut nunc elementum tristique. Maecenas non erat mauris. Donec consectetur, felis ac scelerisque dapibus, lectus erat iaculis ante, in cursus nisi lorem eu tortor. ",
+            textColor: "text-gray-800",
+            headerColor: "text-gray-900",
             wave: true,
-            waveColor: "fill-amber-500",
-            divColor: "bg-amber-500",
+            waveColor: "fill-purple-200",
+            divColor: "bg-purple-200",
         },
         {
             svg: <TripSvg className="h-full w-full" />,
             isRight: false,
-            header: "Call Us",
-            description: "+123456789",
-            wave: true,
-            waveColor: "fill-slate-500",
-            divColor: "bg-slate-500",
+            header: "Chatta med oss",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit, at ullamcorper odio vehicula et. Curabitur in neque sit amet risus tempor fermentum et a purus. Vivamus vitae lectus ut nunc elementum tristique. Maecenas non erat mauris. Donec consectetur, felis ac scelerisque dapibus, lectus erat iaculis ante, in cursus nisi lorem eu tortor. ",
+            wave: false,
+            textColor: "text-gray-800",
+            headerColor: "text-gray-900",
         },
         {
             svg: <ApplicationSvg className="h-full w-full" />,
-            isRight: false,
-            header: "Call Us",
-            description: "+123456789",
+            isRight: true,
+            header: "Ring oss",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit, at ullamcorper odio vehicula et. Curabitur in neque sit amet risus tempor fermentum et a purus. Vivamus vitae lectus ut nunc elementum tristique. Maecenas non erat mauris. Donec consectetur, felis ac scelerisque dapibus, lectus erat iaculis ante, in cursus nisi lorem eu tortor. ",
             wave: false,
-            waveColor: "",
-            divColor: "",
+            textColor: "text-gray-800",
+            headerColor: "text-gray-900",
+        },
+        {
+            svg: <DevSvg className="h-full w-full" />,
+            isRight: false,
+            header: "Besök oss",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod velit, at ullamcorper odio vehicula et. Curabitur in neque sit amet risus tempor fermentum et a purus. Vivamus vitae lectus ut nunc elementum tristique. Maecenas non erat mauris. Donec consectetur, felis ac scelerisque dapibus, lectus erat iaculis ante, in cursus nisi lorem eu tortor. ",
+            textColor: "text-gray-800",
+            headerColor: "text-gray-900",
+            wave: true,
+            waveColor: "fill-indigo-200",
+            divColor: "bg-indigo-200",
         },
     ];
 
 
     return (
         <>
-            <div className="h-84 bg-center bg-cover bg-[url('./old-town.jpg')]" >
+            <div className="h-150 bg-bottom bg-cover bg-[url('./old-town.jpg')]" >
                 <div className="w-full h-full flex flex-col justify-center text-center text-gray-100 gap-y-2">
                     <h1 className="text-6xl strokeme font-permanentmarker">
                         Kontakt Skillswipe
@@ -93,7 +108,7 @@ export default function ContactPage() {
                 <QuickAccessBanner props={helpCenterProps} />
             </div>
 
-            <div className="space-y-5">
+            <div className="">
                 {contactPageComponents.map((component, index) => (
                     <SvgTextComponent key={index} {...component} />
                 ))}

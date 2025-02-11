@@ -7,7 +7,9 @@ interface PropsInterface {
     isRight: boolean,
     header: string,
     description: string,
-    wave: boolean,
+    headerColor: string,
+    textColor: string,
+    wave?: boolean,
     waveColor?: string,
     divColor?: string,
 }
@@ -16,19 +18,19 @@ interface PropsInterface {
 export default function svgTextComponent(props: PropsInterface) {
 
     return (
-        <div className="w-full border">
+        <div className="w-full h-auto">
             {props.wave && (
                 <TopWave className={`w-full -mb-1  ${props.waveColor}`} />
             )}
 
-            <div className={`flex py-10 justify-between h-60 items-center
-                ${props.divColor} ${props.isRight ? "flex-row-reverse" : "flex-row"}`}>
-                <div className="border h-64 w-auto">
+            <div className={`pt-10 pb-20 px-20 flex justify-around items-center
+                ${props.divColor} ${props.isRight ? "flex-col md:flex-row-reverse" : "flex-col md:flex-row"}`}>
+                <div className="h-64 max-w-full md:max-w-1/2">
                     {props.svg}
                 </div>
-                <div className="border">
-                    <h3 className="text-lg font-semibold">{props.header}</h3>
-                    <p className="text-sm text-gray-600">{props.description}</p>
+                <div className="max-w-full md:max-w-1/2 mt-4">
+                    <h3 className={`text-lg font-semibold ${props.headerColor}`}>{props.header}</h3>
+                    <p className={`text-sm font-semibold ${props.textColor}`}>{props.description}</p>
                 </div>
             </div>
 
