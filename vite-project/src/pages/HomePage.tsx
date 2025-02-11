@@ -3,6 +3,8 @@ import FaqSvg from '../assets/faq.svg?react'
 import BrowsingSvg from '../assets/browsing.svg?react'
 import CoworkerSvg from '../assets/co-worker.svg?react'
 import CampfireSvg from '../assets/campfire.svg?react'
+import HeroComponent from "../components/Hero";
+import JobsComponent from "../components/JobCards";
 
 
 export default function HomePage() {
@@ -11,7 +13,7 @@ export default function HomePage() {
         {
             svg: <BrowsingSvg className="h-full w-full" />,
             isRight: false,
-            title: "Ring oss",
+            title: "Mejla oss",
             description: "För alla frågor eller support, tveka inte att kontakta oss. Vårt team finns här för att hjälpa dig navigera dina behov och ge den bästa möjliga upplevelsen",
             wave: false,
             titleColor: "text-gray-900 dark:text-gray-100",
@@ -49,7 +51,7 @@ export default function HomePage() {
 
     return (
         <>
-            <div className="h-150 bg-top bg-cover bg-[url('./main-cover.jpg')]" />
+            <HeroComponent />
 
             <div className="my-10">
                 {startPageComponents.map((component, index) => (
@@ -57,6 +59,7 @@ export default function HomePage() {
                 ))}
             </div>
 
+            <JobsComponent />
         </>
     );
 }

@@ -40,7 +40,7 @@ export default function HelpCenterPage() {
             onClick: () => alert("Kakor clicked"),
         },
         {
-            icon: <Ribbon size={60} className="text-pink-400 dark:text-pink-200" />,
+            icon: <Ribbon size={60} className="text-pink-300 dark:text-pink-200" />,
             text: "Rosa Bandet",
             btnText: "Läs mer",
             onClick: () => alert("Rosa Bandet clicked"),

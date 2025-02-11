@@ -13,13 +13,13 @@ interface QuickAccessBannerProps {
 
 export default function QuickAccessBanner({ props }: QuickAccessBannerProps) {
     return (
-        <div className="w-full h-60 md:h-80 flex justify-around
-            bg-gradient-to-b from-gray-50 via-gray-100 to-gray-50
-            dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-800 dark:to-gray-700">
+        <div className="w-full h-60 mb-10 md:h-80 flex justify-around
+            bg-gradient-to-b from-gray-200 via-gray-200 to-gray-100
+            dark:bg-gradient-to-b dark:from-gray-700 dark:via-gray-800 dark:to-slate-700">
 
             {props.map((selection, index) => (
                 <div key={index} className="flex items-center my-auto flex-col gap-y-4">
-                    <div className="text-sky-900 dark:text-gray-100">
+                    <div className="text-slate-400 dark:text-gray-100">
                         {selection.icon}
                     </div>
                     <p className="font-oswald text-sm md:text-lg text-gray-600 dark:text-gray-100 
