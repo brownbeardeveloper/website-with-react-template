@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage.tsx";
 import SlugPage from "./pages/SlugPage.tsx";
 import "./global.css";
 import HelpCenterPage from "./pages/HelpCenterPage.tsx";
+import ProductPage from "./pages/ProductPage.tsx";
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/help",
         element: <HelpCenterPage />
+      },
+      {
+        path: "/products",
+        element: <ProductPage />
       },
       {
         path: "/:slug",
