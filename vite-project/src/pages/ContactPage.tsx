@@ -1,5 +1,5 @@
 import QuickAccessBanner from "../components/QuickAccessBanner";
-import ContactBanner from "../components/ContactBanner";
+import SvgTextComponent from "../components/SvgTextComponent";
 import { MessagesSquare } from 'lucide-react';
 import { ShieldCheck } from 'lucide-react';
 import { Ribbon } from 'lucide-react';
@@ -45,7 +45,7 @@ export default function ContactPage() {
         },
     ];
 
-    const selections = [
+    const contactPageComponents = [
         {
             svg: <DevSvg className="h-full w-full" />,
             isRight: true,
@@ -94,8 +94,8 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-5">
-                {selections.map((selection, index) => (
-                    <ContactBanner key={index} props={selection} />
+                {contactPageComponents.map((component, index) => (
+                    <SvgTextComponent key={index} {...component} />
                 ))}
             </div>
         </>

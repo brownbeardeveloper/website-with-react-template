@@ -2,21 +2,18 @@ import { ReactNode } from "react";
 import TopWave from '../assets/top-wave.svg?react'
 import BottomWave from '../assets/bottom-wave.svg?react'
 
-interface BannerProps {
-    svg: ReactNode;
-    isRight: boolean;
-    header: string;
-    description: string;
-    wave: boolean;
-    waveColor: string;
-    divColor: string;
-}
-
 interface PropsInterface {
-    props: BannerProps[];
+    svg: ReactNode,
+    isRight: boolean,
+    header: string,
+    description: string,
+    wave: boolean,
+    waveColor?: string,
+    divColor?: string,
 }
 
-export default function ContactBanner({ props }: PropsInterface) {
+
+export default function svgTextComponent(props: PropsInterface) {
 
     return (
         <div className="w-full border">
